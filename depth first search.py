@@ -10,13 +10,13 @@ graph = {
 
 visited = set() # this is a set data type used to keep track of visited nodes of graph.
 
-def dfs(visited, graph, node):  #function for DFS
+def depthFirstSearch(visited, graph, node):  #function for DFS
     if node not in visited:
         print (node)
         visited.add(node)
         for neighbour in graph[node]:
-            dfs(visited, graph, neighbour)
+            depthFirstSearch(visited, graph, neighbour)
 
 # calling the function while passing the start point
 print("Following is the Depth-First Search")
-dfs(visited, graph, '1')
+depthFirstSearch(visited, graph, '1')
